@@ -5,9 +5,9 @@ import OnboardingScreen from './components/OnboardingScreen';
 import EmptyDashboard from './components/EmptyDashboard';
 import ModernJobPostModal from './components/ModernJobPostModal';
 
-export default function EmployerApp({ onSwitchToPartner }) {
+export default function EmployerApp({ onSwitchToPartner, initialScreen = 'dashboard' }) {
   // Screen Stage: 'login' | 'onboarding' | 'dashboard'
-  const [currentScreen, setCurrentScreen] = useState('login');
+  const [currentScreen, setCurrentScreen] = useState(initialScreen);
 
   // Business profile state populated through the user journey
   const [businessProfile, setBusinessProfile] = useState({
